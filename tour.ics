@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//UTS Practice Advocacy//Town Hall Tour//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:townhall-block-tour-20261013@uts-advocacy
+DTSTAMP:20261007T012700Z
+DTSTART:20261013T010000Z
+DTEND:20261013T013000Z
+SUMMARY:Town Hall Block Guided Tour
+LOCATION:Sydney Town Hall steps\, 483 George St\, Sydney NSW 2000
+GEO:-33.87318;151.20668
+DESCRIPTION:A guided walk through the Town Hall block: demolition\, embodi
+ ed carbon and what a retain-first assessment could look like. About 30 mi
+ ns. Meet on the Town Hall steps on George St.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Town Hall Block Guided Tour in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

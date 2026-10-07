@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Guided tour of the Town Hall block, Tue 13 Oct, 12pm. Meet on the Town Hall steps, George St.">
+<title>Town Hall Block Tour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Archivo:wght@400;600;800&display=swap">
+<style>
+/* Layout: one narrow poster column, stacked full-width signage lines, then two big action slabs. Single committed look (concrete grey + signal red + charcoal) in both themes. */
+:root {
+  --pink: #D3D8D6;
+  --pink-deep: #C3C9C7;
+  --red: #D24B48;
+  --red-ink: #333132;
+  --cream: #E8ECEB;
+  --display: "Bungee", "Arial Black", Impact, sans-serif;
+  --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+img { max-width: 100%; }
+html, body { background: var(--pink); color: var(--red); }
+body {
+  font-family: var(--body);
+  padding-inline: 16px;
+  padding-block: 28px 40px;
+}
+.wrap { max-width: 520px; margin-inline: auto; display: flex; flex-direction: column; gap: 28px; }
+
+.stack { font-family: var(--display); font-weight: 400; text-transform: uppercase; line-height: 1; margin: 0; display: flex; flex-direction: column; }
+.stack span { display: block; letter-spacing: .005em; }
+.s0 { font-size: clamp(3.6rem, 19vw, 6.6rem); line-height: .95; }
+.s1 { font-size: clamp(2rem, 10.4vw, 3.6rem); }
+.s2 { font-size: clamp(1.6rem, 8.4vw, 2.9rem); }
+.s3 { font-size: clamp(1.15rem, 6.2vw, 2.15rem); }
+.s4 { font-size: clamp(1.5rem, 7.6vw, 2.65rem); }
+
+.lede { font-family: var(--display); font-size: .92rem; line-height: 1.55; color: var(--red); margin: 0; max-width: 60ch; text-transform: uppercase; }
+
+.details {
+  border-top: 4px solid var(--red-ink);
+  border-bottom: 4px solid var(--red-ink);
+  color: var(--red-ink);
+  padding-block: 16px;
+  display: grid; grid-template-columns: auto 1fr; gap: 10px 18px; margin: 0;
+}
+.details dt { font-family: var(--body); font-weight: 800; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; padding-top: .45em; }
+.details dd { margin: 0; font-family: var(--display); font-size: 1.35rem; line-height: 1.1; text-transform: uppercase; min-width: 0; }
+.details dd small { display: block; font-family: var(--body); font-size: .85rem; text-transform: none; font-weight: 600; color: var(--red-ink); margin-top: 4px; letter-spacing: 0; }
+
+.actions { display: flex; flex-direction: column; gap: 12px; }
+.btn {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: var(--red); color: var(--cream);
+  text-decoration: none; font-family: var(--display); text-transform: uppercase;
+  font-size: 1.5rem; line-height: 1; padding: 20px;
+  transition: transform .12s ease, background .12s ease;
+}
+.btn:hover { background: var(--red-ink); }
+.btn:active { transform: translateY(2px); }
+.btn:focus-visible { outline: 4px solid var(--red-ink); outline-offset: 3px; }
+.btn .arrow { font-family: var(--body); font-weight: 800; font-size: 1.5rem; }
+.btn.ghost { background: transparent; color: var(--red); border: 3px solid var(--red); font-size: 1.05rem; padding: 14px 18px; }
+.btn.ghost:hover { background: var(--pink-deep); }
+.sub { display: flex; gap: 12px; flex-wrap: wrap; }
+.sub .btn { flex: 1 1 120px; justify-content: center; }
+
+.about h2 { font-family: var(--display); text-transform: uppercase; font-weight: 400; font-size: 1.6rem; line-height: 1; margin: 0 0 10px; }
+.about p { margin: 0 0 10px; line-height: 1.55; color: var(--red-ink); font-size: .98rem; max-width: 60ch; }
+
+footer { font-family: var(--body); font-weight: 800; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; border-top: 2px solid var(--red); padding-top: 12px; }
+
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+</style>
+
+</head>
+<body>
+<main class="wrap">
+  <h1 class="stack" aria-label="Seven buildings stand here. They are not heritage listed. They are not worthless. Assess before you demolish.">
+    <span class="s0">Seven</span>
+    <span class="s1">buildings</span>
+    <span class="s2">stand here</span>
+    <span class="s3">they are not<br>heritage listed</span>
+    <span class="s3">they are not<br>worthless</span>
+    <span class="s4">assess before<br>you demolish</span>
+  </h1>
+
+  <p class="lede">A guided walk through the Town Hall block: demolition, embodied carbon, and what a retain-first assessment could look like.</p>
+
+  <dl class="details">
+    <dt>When</dt>
+    <dd id="when-text">Tue 13 Oct<small id="time-text">12:00 – 12:30pm</small></dd>
+    <dt>Meet</dt>
+    <dd>Town Hall steps<small>483 George St, Sydney</small></dd>
+    <dt>Length</dt>
+    <dd>About 30 mins<small>On foot, all welcome</small></dd>
+  </dl>
+
+  <div class="actions">
+    <a class="btn" id="map-link" href="#" target="_blank" rel="noopener">Meeting point <span class="arrow" aria-hidden="true">→</span></a>
+    <a class="btn" id="ics-link" href="tour.ics">Save the date <span class="arrow" aria-hidden="true">+</span></a>
+    <div class="sub">
+      <a class="btn ghost" id="gcal-link" href="#" target="_blank" rel="noopener">Google Cal</a>
+      <a class="btn ghost" id="outlook-link" href="#" target="_blank" rel="noopener">Outlook</a>
+      <a class="btn ghost" id="apple-link" href="#" target="_blank" rel="noopener">Apple Maps</a>
+    </div>
+  </div>
+
+  <section class="about">
+    <h2>Why this tour</h2>
+    <p>Plans for Sydney Square require the removal of the block between George St and Pitt St. Seven buildings are to be demolished because they are not heritage listed.</p>
+    <p>No proper assessment has been made of their value. The current model discards embodied carbon, material resources and existing building capacity in the pursuit of the new.</p>
+    <p>We are advocating for an architectural practice that works within existing planning and development structures to change how redevelopment decisions are made. This practice proposes that existing buildings should first be assessed for their capacity to be retained and adapted before demolition and redevelopment are considered.</p>
+  </section>
+
+  <footer>UTS Practice: Advocacy · Town Hall Block</footer>
+</main>
+
+<script>
+// Event config: edit these values and republish. Times are Sydney local (AEDT, UTC+11 in October).
+const EVENT = {
+  title: "Town Hall Block Guided Tour",
+  date: "2026-10-13",     // YYYY-MM-DD
+  start: "12:00",         // 24h local
+  end: "12:30",
+  offset: "+11:00",
+  location: "Sydney Town Hall steps, 483 George St, Sydney NSW 2000",
+  details: "Guided walk (about 30 mins) through the Town Hall block: the Sydney Square proposal, demolition, embodied carbon and retain-first assessment. Meet on the Town Hall steps on George St.",
+  lat: -33.87318, lng: 151.20668
+};
+
+const toUtcStamp = (d, t) => new Date(`${d}T${t}:00${EVENT.offset}`).toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+const enc = encodeURIComponent;
+
+document.getElementById("gcal-link").href =
+  "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+  "&text=" + enc(EVENT.title) +
+  "&dates=" + toUtcStamp(EVENT.date, EVENT.start) + "/" + toUtcStamp(EVENT.date, EVENT.end) +
+  "&location=" + enc(EVENT.location) +
+  "&details=" + enc(EVENT.details);
+
+document.getElementById("outlook-link").href =
+  "https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent" +
+  "&subject=" + enc(EVENT.title) +
+  "&startdt=" + enc(`${EVENT.date}T${EVENT.start}:00${EVENT.offset}`) +
+  "&enddt=" + enc(`${EVENT.date}T${EVENT.end}:00${EVENT.offset}`) +
+  "&location=" + enc(EVENT.location) +
+  "&body=" + enc(EVENT.details);
+
+document.getElementById("map-link").href =
+  "https://www.google.com/maps/search/?api=1&query=" + EVENT.lat + "%2C" + EVENT.lng;
+document.getElementById("apple-link").href =
+  "https://maps.apple.com/?ll=" + EVENT.lat + "," + EVENT.lng + "&q=" + enc("Town Hall steps – tour meeting point");
+
+// Keep the displayed date/time in step with the config
+const d = new Date(`${EVENT.date}T12:00:00${EVENT.offset}`);
+const day = d.toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "short", timeZone: "Australia/Sydney" }).replace(",", "");
+const fmt = t => { let [h, m] = t.split(":").map(Number); const ap = h >= 12 ? "pm" : "am"; h = h % 12 || 12; return `${h}:${String(m).padStart(2, "0")}${ap}`; };
+document.getElementById("when-text").firstChild.nodeValue = day;
+document.getElementById("time-text").textContent = `${fmt(EVENT.start)} – ${fmt(EVENT.end)}`;
+</script>
+
+</body>
+</html>
